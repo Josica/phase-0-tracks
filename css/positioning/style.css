@@ -1,24 +1,20 @@
-
-.picture{
-	display:flex;
-	justify-content:center;
-	align-items:center;
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-#glasses{
-	position: absolute;
-  z-index: 1;
-  top: 34%;
-  left: auto;
+#glasses {
+    position: absolute;
+    z-index: 1;
+    top: 34%;
+    left: auto;
 }
-
-#hat{
-	position: absolute;
- 	z-index: 2;
-  top: 4%;
-  left: auto;
+#hat {
+    position: absolute;
+    z-index: 2;
+    top: 4%;
+    left: auto;
 }
-
-#octopus{
-  margin-top: 80px;
+#octopus {
+    margin-top: 80px;
 }
