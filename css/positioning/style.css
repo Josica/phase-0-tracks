@@ -7,16 +7,16 @@
 
 #glasses{
 	position: absolute;
-  	z-index: 1;
-  	top: 34%;
-    left: auto;
+  z-index: 1;
+  top: 34%;
+  left: auto;
 }
 
 #hat{
 	position: absolute;
  	z-index: 2;
-  	top: 4%;
-    left: auto;
+  top: 4%;
+  left: auto;
 }
 
 #octopus{
