@@ -1,3 +1,9 @@
+puts "Welcome to the Werewolf Resource Hiring Processor"
+puts "How many employees will be processed?"
+employees = gets.chomp
+employees = employees.to_i
+i = 0
+while i < employees
 puts "Welcome to the Werewolf Inc Interview"
 puts "What is your name?"
 name = gets.chomp
@@ -32,14 +38,17 @@ end
 puts "*************************** Vampire Detection Results ******************************"
 
 if name == "Drake Cula" || name == "Tu Fang"
-	puts "Definitely a vampire."
+	puts "#{name} - Definitely a vampire."
 elsif correct_age == true && (garlic_bread == true || health_insurance == true)
-	puts "Probably not a vampire."
+	puts "#{name} - Probably not a vampire."
 elsif correct_age == false && (garlic_bread == false || health_insurance == false)
-	puts "Probably a vampire."
+	puts "#{name} - Probably a vampire."
 elsif (correct_age == false || garlic_bread == false) && health_insurance == false
-	puts "Almost certainly a vampire."
+	puts "#{name} - Almost certainly a vampire."
 else 
-	puts "Results inconclusive."
+	puts "#{name} - Results inconclusive."
 end 
 puts "************************************************************************************"
+
+i+=1 
+end 
