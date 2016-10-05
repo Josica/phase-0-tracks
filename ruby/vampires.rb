@@ -35,9 +35,22 @@ elsif health_insurance == "Y"
 	health_insurance = true 
 end
 
+puts "Please name any allergies, one at a time. Please type “done” when finished."
+allergies = nil 
+until allergies == "done" || allergies == "sunshine"
+	allergies = gets.chomp
+	if allergies == "sunshine"
+		sun_allergy = true 
+	else 
+		sun_allergy = false 
+	end 
+end 
+
 puts "*************************** Vampire Detection Results ******************************"
 
-if name == "Drake Cula" || name == "Tu Fang"
+if sun_allergy == true 
+	puts "#{name} - Probably a vampire."
+elsif name == "Drake Cula" || name == "Tu Fang"
 	puts "#{name} - Definitely a vampire."
 elsif correct_age == true && (garlic_bread == true || health_insurance == true)
 	puts "#{name} - Probably not a vampire."
