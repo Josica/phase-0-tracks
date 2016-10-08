@@ -1,0 +1,51 @@
+body {
+  background-color: #eff6f6;
+  margin: 0px auto;
+  width: 90%;
+  font-family:Arial,sans-serif;
+  font-size: .9em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column-1 {
+  background-color: #e0eeee;
+  width: 44%;
+  display: inline-block;
+  vertical-align: top; 
+  margin: 1%;
+  padding: 2%;
+}
+
+.column-2{
+  background-color: #e0eeee;
+  width: 43%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1%;
+  padding: 2%; 
+}
+
+header {
+  background-color: #eff6f6;
+  width: 98%;
+  margin: 0px auto;
+}
+
+footer {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: .8em;
+  background-color: #eff6f6;
+  margin: 0px auto;
+  width: 98%;
+}
+
+h1 {
+  font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+}
