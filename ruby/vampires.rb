@@ -52,7 +52,7 @@ if sun_allergy == true
 	puts "#{name} - Probably a vampire."
 elsif name == "Drake Cula" || name == "Tu Fang"
 	puts "#{name} - Definitely a vampire."
-elsif correct_age == true && (garlic_bread == true || health_insurance == true)
+elsif correct_age == true && (garlic_bread == true || health_insurance == true) #could have used (health_insurance != false) but wanted to keep == to stay consistent 
 	puts "#{name} - Probably not a vampire."
 elsif correct_age == false && (garlic_bread == false || health_insurance == false)
 	puts "#{name} - Probably a vampire."
