@@ -130,7 +130,7 @@ state_capitals = {
 }
 
 state_capitals.select! { |state, city| city.include? "A" }
-puts "Select state if city includes a capital A "
+puts "Select city if it includes a capital A "
 puts "#{state_capitals}"
 puts "\n"
 
