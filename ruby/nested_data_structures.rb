@@ -41,3 +41,11 @@ hogwarts = {
 	}
 }
 
+puts "The color in the 0th index in the color array in the Slytherin House: "
+puts hogwarts[:slytherin][:colors][0]
+puts "\n"
+puts "The value in the 1st index in the values array in the Ravenclaw House: "
+puts hogwarts[:ravenclaw][:values][1]
+puts "\n"
+puts "The founder of the Hufflepuff House: "
+puts hogwarts[:ravenclaw][:founder]
