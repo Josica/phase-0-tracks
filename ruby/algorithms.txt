@@ -1,0 +1,33 @@
+Release 0: Equip Your New Robot
+Algorithm for using an elevator
+
+- Use information human provided to determine current floor. 
+- Use information human provided to determine to go up or down, based on floor number given.
+	- Push button (up if desired floor is higher than current floor or down if desired floor is lower than current floor else if current floor is equal to desired floor do not enter elevator)
+	- Wait til all humans are off elevator before entering.
+- Locate floor number buttons inside the elevator. 
+- Using previous data read, push the button of the floor that was given. 
+- Wait for given floor to come.
+- Once reached desired floor, exit out of elevator. 
+
+Release 1: Find a Real-Life Algorithm
+Algorithm for Making Tea
+
+- Go to kitchen.
+- Locate and get pot.
+- Locate and get cup to measure water.
+- Locate sink.
+- Get water from faucet filling about 60 percent of the cup.
+- Dump water from cup into pot.
+- Place pot on stovetop.
+- Locate and get matches.
+- Turn on stove to medium heat.
+- Strike match and light stove.
+- Wait for water to boil.
+- Locate and get tea bag.
+- Once water is at boiling tempurature place tea bag into pot.
+- Once tea is well brewed, remove tea bag.
+- Locate and get milk, sugar and spoon.
+- Add milk til it turns a nice caramel color.
+- Add one tablespoon of sugar.
+- Turn off stove. 
