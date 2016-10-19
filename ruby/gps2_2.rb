@@ -38,51 +38,55 @@
 # print them to the screen in a pretty way that is easy to read
 # output: the final grocery list hash
 
+default_grocery_list = {}
 
 
-def create_grocery_list (grocery_items)
-	grocery_arr = grocery_items.split(" ")
-	grocery_list = Hash.new 
-	grocery_arr.each do |grocery| 
-	grocery_list[grocery] = 1
+def create_grocery_list (default_grocery_list, grocery_items)
+   grocery_arr = grocery_items.split(" ")
+   grocery_arr.each do |grocery| 
+   default_grocery_list[grocery] = 1
 end 
-grocery_list
-end 
+    default_grocery_list
+end
 
-default_grocery_list = create_grocery_list("carrots apples cereal pizza")
+
 
 def add_item(default_grocery_list,item,quantity)
 default_grocery_list[item] = quantity.to_i
 default_grocery_list
-end 
+end
+
+
 
 def remove_item(default_grocery_list, item)
-	default_grocery_list.delete(item)
-	default_grocery_list
+   default_grocery_list.delete(item)
+   default_grocery_list
 end
+
+
 
 def update_quantity (default_grocery_list, item, quantity)
-	default_grocery_list[item] = quantity.to_i 
-	default_grocery_list
+   default_grocery_list[item] = quantity.to_i 
+   default_grocery_list
 end
 
-def print_pretty (default_grocery_list)
-	default_grocery_list. each do |item , quantity|
-		puts" Grocery Item: #{item} , Quantity: #{quantity}"
-	end
-end 
 
-the_grocery_list = {}
-puts"***************Grocery List***************"
 
-the_grocery_list = create_grocery_list("carrots apples cereal pizza")
-the_grocery_list = add_item(default_grocery_list,"Lemonade",2)
-the_grocery_list = add_item(default_grocery_list,"Tomatoes",3)
-the_grocery_list = add_item(default_grocery_list,"Onions",1)
-the_grocery_list = add_item(default_grocery_list,"Ice Cream",4)
-the_grocery_list = remove_item(default_grocery_list, "Lemonade")
-the_grocery_list = update_quantity(default_grocery_list, "Ice Cream", 1)
-puts print_pretty(the_grocery_list)
+def print_pretty(default_grocery_list)
+    puts"**********Grocery List**********"
+    default_grocery_list.each do |item, quantity|
+        puts "Grocery Item: #{item} , Quantity: #{quantity}"
+    end
+end
+
+create_grocery_list(default_grocery_list, "carrots apples cereal pizza")
+add_item(default_grocery_list,"Lemonade", 2)
+add_item(default_grocery_list,"Tomatoes", 3)
+add_item(default_grocery_list,"Onions", 1)
+add_item(default_grocery_list,"Ice Cream", 4)
+remove_item(default_grocery_list, "Lemonade")
+update_quantity(default_grocery_list, "Ice Cream", 1)
+puts print_pretty(default_grocery_list)
 
 
 
