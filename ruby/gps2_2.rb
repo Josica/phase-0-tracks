@@ -38,6 +38,8 @@
 # print them to the screen in a pretty way that is easy to read
 # output: the final grocery list hash
 
+#Refactored code to have hash as input 
+
 default_grocery_list = {}
 
 
@@ -89,19 +91,24 @@ update_quantity(default_grocery_list, "Ice Cream", 1)
 puts print_pretty(default_grocery_list)
 
 
+# Reflection 
 
+# What did you learn about pseudocode from working on this challenge?
+# Writing psuedocode helps clearify exactly what we need to code.
 
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# We had to keep inputting hashes into method parameters instead of using Classes.
 
+# What does a method return?
+# A method returns the last line of code inside the method. 
 
+# What kind of things can you pass into methods as arguments?
+# You can pass strings, integers, arrays, hashes, and other methods.
 
+# How can you pass information between methods?
+#You can use the same argument named the same and input it and pass it to the method. 
 
-
-
-
-
-
-
-
-
-
-
+# What concepts were solidified in this challenge, 
+# and what concepts are still confusing?
+# Hashes were more solidified in this challenge for me, 
+# but I still have a few questions left on them. 
