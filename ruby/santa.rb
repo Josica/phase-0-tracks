@@ -1,5 +1,8 @@
 class Santa 
 
+	attr_reader :age , :ethnicity
+	attr_accessor :gender
+
 	def initialize(gender, ethnicity)
 		@gender = gender 
 		@ethnicity = ethnicity
@@ -25,22 +28,6 @@ class Santa
 		@reindeer_ranking.delete_if {|name| name == reindeer}
 		@reindeer_ranking << reindeer
 	end 
-
-	def age 
-		@age 
-	end 
-
-	def ethnicity
-		@ethnicity
-	end 
-
-	def gender
-		@gender
-	end 	
-
-	def gender=(new_gender)
-		@gender = new_gender
-	end 
 end
 
 # santas = []
@@ -56,6 +43,8 @@ the_santa = Santa.new("Female", "Moroccan")
 puts "The reindeer is #{the_santa.ethnicity} and is #{the_santa.gender}."
 the_santa.gender = "Male"
 puts "Changed gender to #{the_santa.gender}"
+
+
 
 
 
