@@ -1,7 +1,6 @@
 class Santa 
 
-	attr_reader :age , :ethnicity
-	attr_accessor :gender
+	attr_accessor :gender , :age , :ethnicity 
 
 	def initialize(gender, ethnicity)
 		@gender = gender 
@@ -30,6 +29,21 @@ class Santa
 	end 
 end
 
+def random_gender
+	genders = ["Female", "Male", "Bigender", "Gender fluid", "Androgynous",
+		"Transsexual Male", "Transsexual Female", "Transgender Male", "Transgender Female"]
+	new_gender = genders.sample 
+end
+
+def random_ethnicity
+	ethnicities = ["Algerian", "Bosnian", "Cuban", "Danish", "Ethiopian",
+		"French", "Guyanese", "Haitian", "Indian", "Japanese", "Korean", 
+		"Lao", "Mauritian", "Nepali", "Omani", "Pakistani", "Qatari", 
+		"Romanian", "Sri Lankan", "Taiwanese", "Ugandan", "Welsh",
+		"Yugoslavian", "Zimbabwean"]
+	new_ethnicity = ethnicities.sample 
+end
+
 # santas = []
 # santas << Santa.new("Female", "Moroccan")
 # santas << Santa.new("Transfeminine", "Guyanese")
@@ -39,14 +53,17 @@ end
 # santas << Santa.new("Gender fluid", "Croatian")
 # santas << Santa.new("Bigender", "Zimbabwean")
 
-the_santa = Santa.new("Female", "Moroccan")
-puts "The reindeer is #{the_santa.ethnicity} and is #{the_santa.gender}."
-the_santa.gender = "Male"
-puts "Changed gender to #{the_santa.gender}"
+# the_santa = Santa.new("Female", "Moroccan")
+# puts "The reindeer is #{the_santa.ethnicity} and is #{the_santa.gender}."
+# the_santa.gender = "Male"
+# puts "Changed gender to #{the_santa.gender}"
 
+santas = []
 
-
-
-
-
+100.times do |santa| 
+new_santa = Santa.new(random_gender, random_ethnicity)
+new_santa.age = rand(140) 
+puts "This new santa is only #{new_santa.age} and is #{new_santa.ethnicity} and #{new_santa.gender}."
+puts "\n"
+end 
 
