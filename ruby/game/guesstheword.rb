@@ -1,13 +1,3 @@
-# Psuedocode:
-
-# Create a GuessTheWordGame class that will have 
-# a method to initialize instance variables
-# a method to check if user's guess is letter
-# a method to check if user's guess is word
-# a method to show current state of the guess
-# a method to have the fixed count based on the word user inputs 
-# a method that will allow user to guess based on the fixed count of guesses 
-
 class GuessTheWordGame 
 
 	attr_accessor :the_word , :the_guess
@@ -16,7 +6,6 @@ class GuessTheWordGame
 		@the_word = the_word.downcase.chars
 		@the_guess = the_guess.downcase.chars
 		@guess_count = 0
-		@is_over = false 
 	end 
 
 	def initial_board 
@@ -28,4 +17,8 @@ class GuessTheWordGame
 		end
 		return display
 	end
+
+	def max 
+		max_guess_count = @the_word.length.to_i
+	end 
 end 
