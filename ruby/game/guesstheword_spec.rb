@@ -1,4 +1,9 @@
-require_relative 'GuessTheWordGame' 
+require_relative 'guesstheword' 
 
 describe GuessTheWordGame do 
-	let(:guessTheWordGame) {GuessTheWordGame.new}
+
+	it "will return nine spaces " do 
+		game = GuessTheWordGame.new("superhero","spaghetti")
+		expect(game.initial_board) .to eq ("_ _ _ _ _ _ _ _ _ ")
+end
+end 

@@ -10,30 +10,22 @@
 
 class GuessTheWordGame 
 
+	attr_accessor :the_word , :the_guess
+
 	def initialize(the_word, the_guess) 
-		@the_word = the_word
-		@the_guess = the_guess
+		@the_word = the_word.downcase.chars
+		@the_guess = the_guess.downcase.chars
 		@guess_count = 0
 		@is_over = false 
 	end 
 
-	def check_letter
-		
+	def initial_board 
+		word_board = @the_word
+		display = ""
+		len = word_board.length 
+		len.times do |word_board|
+		display += "_ "
+		end
+		return display
 	end
-
-	def check_word
-		
-	end
-
-	def guess 
-	end 
-
-	def fix_count
-
-	end 
-
-	def show_state
-		
-	end 
-
 end 
