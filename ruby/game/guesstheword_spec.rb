@@ -5,5 +5,11 @@ describe GuessTheWordGame do
 	it "will return nine spaces " do 
 		game = GuessTheWordGame.new("superhero","spaghetti")
 		expect(game.initial_board) .to eq ("_ _ _ _ _ _ _ _ _ ")
-end
+	end
+
+	it "will return nine spaces " do 
+		game = GuessTheWordGame.new("superhero","spaghetti")
+		expect(game.max) .to eq (9)
+	end
+
 end 
