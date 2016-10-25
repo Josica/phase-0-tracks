@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Seungjae Yun].
+# We spent [1.5] hours on this challenge.
 
 # EXPLANATION OF require_relative
 #require_relative uses the name of the ruby file that is in the same folder 
