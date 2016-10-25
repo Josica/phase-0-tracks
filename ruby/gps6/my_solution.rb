@@ -20,8 +20,7 @@ class VirusPredictor
 
 #virus_effects is a method that is calling the methods predicted_deaths and speed_of_spread with instance variables as arguments
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    print "#{@state} will lose #{predicted_deaths} people in this outbreak, and will spread across the state in #{speed_of_spread} months.\n\n"
   end
 
   private
