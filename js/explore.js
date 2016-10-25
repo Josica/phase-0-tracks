@@ -17,3 +17,9 @@ for (var i = 0; i < str.length; i++) {
 return reversed_str;
 
 }
+
+// Driver Code 
+
+if (1 == 1) {
+	console.log(reverse_string("hello"));
+} 
