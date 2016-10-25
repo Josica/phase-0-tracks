@@ -23,6 +23,7 @@ class VirusPredictor
     print "#{@state} will lose #{predicted_deaths} people in this outbreak, and will spread across the state in #{speed_of_spread} months.\n\n"
   end
 
+#if we move the private method above the virus_effects method, we would not be able to call the two private methods (predicted_deaths, and speed_of_spread) from the outside the class.
   private
 
 #the predicted_deaths is a private method that is predicting deaths based on the population density and will 
@@ -88,6 +89,22 @@ end
 # alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 # alaska.virus_effects
 
-
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The two different hash syntaxes is different because one uses a string while the other a symbol.
+
+# What does require_relative do? How is it different from require?
+# The require_relative method uses the name of the ruby file that is in the same folder to include that file but require would need the entire absolute path.
+
+# What are some ways to iterate through a hash?
+# You can iterate through a hash with the .each method. 
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# While refactoring we noticed that there was unneeded instance variables.
+
+# What concept did you most solidify in this challenge?
+# I really solidified understanding private class methods and understanding the different scopes.
+
+#=======================================================================
