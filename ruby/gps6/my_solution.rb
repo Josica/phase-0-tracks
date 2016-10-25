@@ -27,7 +27,7 @@ class VirusPredictor
 
 #the predicted_deaths is a private method that is predicting deaths based on the population density and will 
 #return number_of_deaths as a float number and will print this out 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,14 +41,12 @@ class VirusPredictor
       number_of_deaths = (@population * 0.05).floor
     end
 
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
-
   end
 
 #the speed_of_spread is a private method that is defaulting the speed to 0.0 and is 
 #calculating speed based on population_density in months and returning the speed as a float and prints this out. 
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -64,8 +62,6 @@ class VirusPredictor
     else
       speed += 2.5
     end
-
-    puts " and will spread across the state in #{speed} months.\n\n"
 
   end
 
