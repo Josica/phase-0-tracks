@@ -82,4 +82,14 @@ function random_test_generator(num)
 // var check1 = {name: "Steven", age: 54}
 // var check2 = {name: "Tamir", age: 54}
 // console.log(share_check(check1, check2));
-console.log(random_test_generator(3));
+// console.log(random_test_generator(3));
+
+for (var i = 0; i < 10; i++)
+{
+	var arr_length = 5; 
+	var random_test_data = random_test_generator(arr_length);
+	var longest = longest_phrase(random_test_data);
+	console.log("Random Array: " + random_test_data + "\n");
+	console.log("Longest phrase is " + longest + "." + "\n"); 
+	console.log("\n"); 
+}
