@@ -1,3 +1,15 @@
+// Psuedocode Release 0 
+// Create a function that takes an array of words 
+// or phrases and returns the longest word or phrase
+// - Create a longest variable to store
+//   the longest phrase to return
+// - Add for loop to loop through the phrase array at each element 
+// - Declare a current word / phrase variable as the ith element of the phrase array
+// - if the longest is equal to null then set it equal to the current phrase 
+// - else if the longest phrase so far is less than the current phrase 
+//   set the current phrase as the longest phrase 
+// - then return the longest phrase
+
 function longest_phrase(phrase)
 {
 	var longest = "";
