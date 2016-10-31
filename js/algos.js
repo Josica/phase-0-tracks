@@ -49,9 +49,37 @@ function share_check(obj1, obj2)
 }
 
 
+//Psuedocode Release 2
+//Write a function that takes an integer for length
+// and builds and returns an array of strings of the given length. 
+// - Create a variable to hold random array 
+// - Use nested loop to build array
+// - Inner loop will take a random number to generate a word 
+//	 with a minimum of 1 letter and a maximum of 10 letters.
+// - Use Math.floor so all numbers have the same chance of being picked (rounded down)
+// - Push random word into random word array
+// - Return randomly generated word array 
+
+function random_test_generator(num)
+{
+	var random_arr = [];
+	for (var i = 0; i < num; i++)
+	{
+		var random = "";
+		var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+		for (var j = 0; j <= Math.floor(Math.random() * 10); j++)
+		{
+			random += alphabet[Math.floor(Math.random() * 26)]
+		}
+		random_arr.push(random);
+	}
+	return random_arr;
+}
 
 // DriverCode
 // console.log(longest_phrase(["apples", "mangos are cool", "star ships", "flowers"]));
-var check1 = {name: "Steven", age: 54}
-var check2 = {name: "Tamir", age: 54}
-console.log(share_check(check1, check2));
+// var check1 = {name: "Steven", age: 54}
+// var check2 = {name: "Tamir", age: 54}
+// console.log(share_check(check1, check2));
+console.log(random_test_generator(3));
