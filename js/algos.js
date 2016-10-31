@@ -29,5 +29,29 @@ function longest_phrase(phrase)
 	return longest;
 }
 
+
+// Psuedocode Release 1
+// Create a function that takes two objects and checks to 
+// see if the objects share at least one key-value pair.
+// Create a loop to check if the keys are equal or not and return a bool. 
+
+function share_check(obj1, obj2)
+{
+	var bool = false; 
+	for (var key in obj1)
+	{
+		if (obj1[key] === obj2[key]) 
+		{
+			bool = true; 
+		}
+	}
+	return bool; 
+}
+
+
+
 // DriverCode
 // console.log(longest_phrase(["apples", "mangos are cool", "star ships", "flowers"]));
+var check1 = {name: "Steven", age: 54}
+var check2 = {name: "Tamir", age: 54}
+console.log(share_check(check1, check2));
