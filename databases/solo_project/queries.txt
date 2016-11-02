@@ -1,0 +1,87 @@
+Query 1 : 
+SELECT * FROM classes;
+
+Output: 
+1|Astronomy
+2|Charms
+3|Defence Against the Dark Arts
+4|Herbology
+5|Potions
+6|Transfiguration
+
+Query 2:
+
+UPDATE professors SET class_name=3 WHERE name="Severus Snape";
+
+Query 3:
+SELECT professors.name, classes.name FROM professors JOIN classes ON professors.class_name = classes.id;
+
+Output:
+Filius Flitwick|Charms
+Aurora Sinistra|Astronomy
+Alastor Moody|Defence Against the Dark Arts
+Pomona Sprout|Herbology
+Horace Slughorn|Potions
+Severus Snape|Defence Against the Dark Arts
+Minerva McGonagall|Transfiguration
+Gilderoy Lockhart|Defence Against the Dark Arts
+
+Query 4:
+SELECT professors.name, classes.name FROM professors JOIN classes ON professors.class_name = classes.id WHERE classes.id = 3;
+
+Output:
+Alastor Moody|Defence Against the Dark Arts
+Severus Snape|Defence Against the Dark Arts
+Gilderoy Lockhart|Defence Against the Dark Arts
+
+Query 5:
+
+DELETE FROM professors
+WHERE house="Slytherin" AND pureblood="true";
+
+Output:
+1|Filius Flitwick|Ravenclaw|false|2
+2|Aurora Sinistra|Unknown|false|1
+3|Alastor Moody|Unknown|true|3
+4|Pomona Sprout|Hufflepuff|false|4
+6|Severus Snape|Slytherin|false|3
+7|Minerva McGonagall|Gryffindor|false|6
+8|Gilderoy Lockhart|Ravenclaw|false|3
+
+Trying out Left Join:
+
+SELECT professors.name, professors.house, classes.name
+FROM professors
+LEFT JOIN classes
+ON professors.class_name = classes.id
+ORDER BY professors.name;
+
+Output:
+Alastor Moody|Unknown|Defence Against the Dark Arts
+Aurora Sinistra|Unknown|Astronomy
+Filius Flitwick|Ravenclaw|Charms
+Gilderoy Lockhart|Ravenclaw|Defence Against the Dark Arts
+Minerva McGonagall|Gryffindor|Transfiguration
+Pomona Sprout|Hufflepuff|Herbology
+Severus Snape|Slytherin|Defence Against the Dark Arts
+
+Trying Out Cross Join:
+
+SELECT professors.name, professors.house, professors.pureblood, classes.name
+FROM professors
+CROSS JOIN classes
+ON professors.class_name = classes.id
+ORDER BY professors.name;
+
+Output:
+Alastor Moody|Unknown|true|Defence Against the Dark Arts
+Aurora Sinistra|Unknown|false|Astronomy
+Filius Flitwick|Ravenclaw|false|Charms
+Gilderoy Lockhart|Ravenclaw|false|Defence Against the Dark Arts
+Minerva McGonagall|Gryffindor|false|Transfiguration
+Pomona Sprout|Hufflepuff|false|Herbology
+Severus Snape|Slytherin|false|Defence Against the Dark Arts
+
+
+
+
