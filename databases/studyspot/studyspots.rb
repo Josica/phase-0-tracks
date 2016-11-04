@@ -3,7 +3,7 @@ require 'sqlite3'
 
 #create database
 db = SQLite3::Database.new("spots.db")
-
+db.results_as_hash = true 
 #create table for spots (if it's not there already)
 create_table = <<-SQLS
 CREATE TABLE IF NOT EXISTS spots(
@@ -19,7 +19,7 @@ SQLS
 
 db.execute(create_table)
 
-#constant study spots data
+#study spots data
 
 data = <<-TESTDATA
 insert or ignore into spots (id, name, type, borough, phone, address, accessibility) values(1, "Stapleton Library", "Library", "Staten Island", "(718) 727-0427", "132 Canal St", "Fully Accessible")
@@ -113,11 +113,72 @@ db.execute(data15)
 
 
 
+#choices 
+bronx = <<-B_BRONX 
+SELECT * FROM spots WHERE borough = "Bronx"
+B_BRONX
+
+statenisland = <<-B_SI
+SELECT * FROM spots WHERE borough = "Staten Island"
+B_SI
+
+brooklyn = <<-B_B
+SELECT * FROM spots WHERE borough = "Brooklyn"
+B_B
+
+queens = <<-B_Q
+SELECT * FROM spots WHERE borough = "Queens"
+B_Q
+
+manhattan = <<-B_M
+SELECT * FROM spots WHERE borough = "Manhattan"
+B_M
 
 
+#user interface
 
+puts"-------------------------------------------------------------------------"
+puts"            WELCOME TO THE NEW YORK CITY STUDY SPOTS DATABASE            "
+puts"-------------------------------------------------------------------------"
+puts"\n"
+puts"Please choose your preferred borough from the options below"
+puts"\n"
+puts"[A] The Bronx"
+puts"[B] Brooklyn"
+puts"[C] Manhattan"
+puts"[D] Queens"
+puts"[E] Staten Island"
+b_choice = gets.chomp 
+b_choice = b_choice.upcase
 
+if b_choice == "A"
+	chosen_b = bronx
+elsif b_choice == "B"
+	chosen_b = brooklyn
+elsif b_choice == "C"
+	chosen_b = manhattan
+elsif b_choice == "D"
+	chosen_b = queens
+elsif b_choice == "E"
+	chosen_b = statenisland
+end 
 
+puts"\n"
+puts"-------------------------------------------------------------------------"
+puts"\n"
+chosen = db.execute(chosen_b)
+puts"Here is a list of study spots in your borough!".upcase
+chosen.each do |spot|
+	puts"\n"
+	puts"#{spot['name']}"
+	puts"- Type: #{spot['type']} "
+	puts"- Address: #{spot['address']}"
+	puts"- Phone Number: #{spot['phone']}"
+	puts"- WheelChair Accessibility: #{spot['accessibility']}"
+	puts"\n"
+end 
+puts"\n"
+puts"-------------------------------------------------------------------------"
 
 
 
