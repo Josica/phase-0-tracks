@@ -4,6 +4,7 @@ require 'sqlite3'
 #create database
 db = SQLite3::Database.new("spots.db")
 db.results_as_hash = true 
+
 #create table for spots (if it's not there already)
 create_table = <<-SQLS
 CREATE TABLE IF NOT EXISTS spots(
@@ -112,8 +113,8 @@ TESTDATA15
 db.execute(data15)
 
 
-
 #choices 
+
 bronx = <<-B_BRONX 
 SELECT * FROM spots WHERE borough = "Bronx"
 B_BRONX
@@ -141,13 +142,14 @@ puts"-------------------------------------------------------------------------"
 puts"            WELCOME TO THE NEW YORK CITY STUDY SPOTS DATABASE            "
 puts"-------------------------------------------------------------------------"
 puts"\n"
-puts"Please choose your preferred borough from the options below"
+puts"Please choose your preferred borough from the options below".upcase
 puts"\n"
 puts"[A] The Bronx"
 puts"[B] Brooklyn"
 puts"[C] Manhattan"
 puts"[D] Queens"
 puts"[E] Staten Island"
+puts"\n"
 b_choice = gets.chomp 
 b_choice = b_choice.upcase
 
@@ -179,7 +181,4 @@ chosen.each do |spot|
 end 
 puts"\n"
 puts"-------------------------------------------------------------------------"
-
-
-
 
