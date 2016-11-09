@@ -1,1 +1,4 @@
-console.log("Script is running!")
+
+var photo = document.getElementById("elephant");
+photo.style.visibility = "hidden";
+
