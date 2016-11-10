@@ -1,0 +1,42 @@
+body {
+	background-color: #B2EBF2;
+}
+
+
+#bunny {
+	position:relative;
+}
+
+#btn {
+    display: inline-block;
+    margin: 0;
+    padding: .6em 1.5em .4em;
+    font-family: 'Arial Black', Helvetica, sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+    border: 0;
+    border-radius: 1em;
+    background: #7abcb5;
+    color: #fff9ee;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #41a29c;
+    transition: all 0.1s ease;
+}
+
+#btn:hover,
+#btn:focus {
+    top: 3px;
+    text-decoration: none;
+    box-shadow: 0 2px 0 #41a29c;
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+}
+
+#btn a {
+    color: white;
+}
