@@ -37,6 +37,16 @@ get '/great_job' do
   end
 end
 
+get '/add' do
+  num1 = params[:num1]
+  num2 = params[:num2]
+  num1 = num1.to_i
+  num2 = num2.to_i
+  result = num1 + num2
+  result = result.to_s
+  "Result: #{result}!"
+end
+
 # write a GET route that retrieves
 # all student data
 get '/students' do
