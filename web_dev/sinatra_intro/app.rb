@@ -23,6 +23,11 @@ get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
 end
 
+get '/contact/:address' do
+  address = params[:address]
+  "Your address is at #{address}."
+end
+
 # write a GET route that retrieves
 # all student data
 get '/students' do
