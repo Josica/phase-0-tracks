@@ -10,11 +10,17 @@ db.results_as_hash = true
 # show students on the home page
 get '/' do
   @students = db.execute("SELECT * FROM students")
+
   erb :home
 end
 
 get '/students/new' do
   erb :new_student
+end
+
+get '/campus' do
+  @campuses = db.execute("SELECT campus FROM students")
+  erb :new_campus
 end
 
 # create new students via
@@ -24,4 +30,8 @@ post '/students' do
   redirect '/'
 end
 
+post '/campus/new' do
+  db.execute("INSERT INTO students (campus) VALUES (?)", [params['city']])
+  redirect '/'
+end
 # add static resources
